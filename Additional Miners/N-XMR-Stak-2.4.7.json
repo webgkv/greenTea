@@ -1,0 +1,32 @@
+{
+    "Path": "xmr-stak.exe",
+    "Uri": "https://github.com/yuzi-co/miners/releases/download/2018.7/xmr-stak-win64-2.4.7.7z",
+    "SHA256": "7FFA40BC1CE7CD4F0C6F881DB0A25B2177356F42320BC30A556CFD22E3229794",
+    "Type": "NVIDIA",
+    "Arguments": [
+        "$(if ($enableSSL){'-O'}else{'-o'}) #Server#:#Port#",
+        "-u #Login#",
+        "-p #Password#",
+        "-r #WorkerName#",
+        "--noCPU",
+        "--noAMD",
+        "--noUAC",
+        "$(if ($Nicehash){'--use-nicehash'})",
+        "--httpd #APIPort#",
+        "--nvidia #GroupName#-#Algorithm#.txt",
+        "#AlgorithmParameters#"
+    ],
+    "API": "XMRig",
+    "APIPort": 4068,
+    "Fee": 0.02,
+    "SSL": true,
+    "Algorithms": {
+        "CnFast": "--currency cryptonight_masari",
+        "CnHaven": "--currency cryptonight_haven",
+        "CnHeavy": "--currency cryptonight_heavy",
+        "CnLiteV7": "--currency cryptonight_lite_v7",
+        "CnSaber": "--currency cryptonight_bittube2",
+        "CnV7": "--currency cryptonight_v7",
+        "CnXTL": "--currency stellite"
+    }
+}
